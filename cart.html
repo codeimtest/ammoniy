@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Аммоний</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+
+	<script src="js/common.js" defer></script>
+
+</head>
+
+<body>
+
+	<div class="app">
+		<header>
+			<div class="container-fluid">
+				<div class="row justify-content-between align-items-center">
+					<div class="col">
+						<a href="#" class="logo">
+							<svg width="152" height="28" viewBox="0 0 152 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.3884 4.71913L16.1849 3.62396e-05L18.8765 4.71913H13.3884Z" fill="#EFE53E" />
+								<path d="M10.8364 9.26345L12.7241 5.9426H19.6804L21.4282 9.26345H10.8364Z" fill="#9DBC49" />
+								<path d="M10.7315 10.9763H21.4281V14.1224H13.9475L10.7315 10.9763Z" fill="#7EA752" />
+								<path d="M21.4282 21.4982V15.7304H15.5556L21.4282 21.4982Z" fill="#4C814F" />
+								<path d="M10.8364 28V17.7578L21.3583 28H10.8364Z" fill="#32588F" />
+								<path d="M26.2522 28V17.7578L32.2297 28H26.2522Z" fill="#32588F" />
+								<path d="M6.0125 28V17.7578L1.52588e-05 28H6.0125Z" fill="#32588F" />
+								<path d="M45.1635 24.5743L44.1848 27.4407H40.2347L45.3383 13.9825H49.3583L54.4619 27.4407H50.5119L49.5331 24.5743H45.1635ZM47.3658 17.7578L46.1074 21.7079H48.5893L47.3658 17.7578Z" fill="#245890" />
+								<path d="M59.6704 19.4707V27.4407H56.035V13.9825H59.2859L63.4107 19.2959L67.5356 14.0175H70.7865V27.4407H67.1511V19.4707L63.4107 24.1898L59.6704 19.4707Z" fill="#245890" />
+								<path d="M77.5332 19.4707V27.4407H73.8978V13.9825H77.1487L81.2735 19.2609L85.4333 13.9825H88.6843V27.4407H85.0488V19.4707L81.3085 24.1898L77.5332 19.4707Z" fill="#245890" />
+								<path d="M103.785 25.7278C102.317 27.1261 100.569 27.8252 98.4719 27.8252C96.3745 27.8252 94.6267 27.1261 93.1586 25.7278C91.6904 24.3295 90.9913 22.6516 90.9913 20.6941C90.9913 18.7365 91.7254 17.0586 93.1586 15.6604C94.6267 14.2621 96.3745 13.563 98.4719 13.563C100.569 13.563 102.317 14.2621 103.785 15.6604C105.253 17.0586 105.953 18.7365 105.953 20.6941C105.953 22.6516 105.253 24.3295 103.785 25.7278ZM95.8152 23.4556C96.5493 24.1897 97.4232 24.5393 98.5069 24.5393C99.5556 24.5393 100.464 24.1897 101.164 23.4556C101.863 22.7216 102.247 21.8127 102.247 20.6941C102.247 19.5755 101.898 18.6666 101.164 17.9326C100.464 17.1985 99.5556 16.8489 98.5069 16.8489C97.4582 16.8489 96.5493 17.1985 95.8152 17.9326C95.0812 18.6666 94.7316 19.5755 94.7316 20.6941C94.7316 21.8127 95.0812 22.7216 95.8152 23.4556Z" fill="#245890" />
+								<path d="M120.495 27.4407H116.859V22.2672H111.965V27.4407H108.33V13.9825H111.965V18.9813H116.859V13.9825H120.495V27.4407Z" fill="#245890" />
+								<path d="M127.241 13.9825V21.4981L132.974 13.9825H136.155V27.4407H132.519V19.9601L126.717 27.4407H123.571V13.9825H127.241Z" fill="#245890" />
+								<path d="M142.902 13.9825V21.4981L148.669 13.9825H151.85V27.4406H148.215V19.96L142.412 27.4406H139.266V13.9825H142.902ZM143.146 11.6404C142.517 11.0461 142.203 10.2771 142.203 9.36824H144.51C144.51 10.0674 144.859 10.4169 145.558 10.4169C146.257 10.4169 146.607 10.0674 146.607 9.36824H148.914C148.914 10.2771 148.6 11.0461 147.97 11.6404C147.341 12.2347 146.537 12.5493 145.523 12.5493C144.51 12.5493 143.776 12.2347 143.146 11.6404Z" fill="#245890" />
+							</svg>
+						</a>
+					</div>
+					<div class="col d-none d-lg-block">
+						<nav>
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Каталог</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col">
+						<div class="shop_widget d-flex justify-content-end align-items-center">
+							<div class="widget_toggle relative d-flex align-items-center">
+								<form action="" class="searchform">
+									<input type="search">
+									<button type="submit">
+										<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.625 16.8125C4.3875 16.8125 0.9375 13.3625 0.9375 9.125C0.9375 4.8875 4.3875 1.4375 8.625 1.4375C12.8625 1.4375 16.3125 4.8875 16.3125 9.125C16.3125 13.3625 12.8625 16.8125 8.625 16.8125ZM8.625 2.5625C5.0025 2.5625 2.0625 5.51 2.0625 9.125C2.0625 12.74 5.0025 15.6875 8.625 15.6875C12.2475 15.6875 15.1875 12.74 15.1875 9.125C15.1875 5.51 12.2475 2.5625 8.625 2.5625Z" fill="#2A2A2A"/>
+											<path d="M16.5 17.5625C16.3575 17.5625 16.215 17.51 16.1025 17.3975L14.6025 15.8975C14.385 15.68 14.385 15.32 14.6025 15.1025C14.82 14.885 15.18 14.885 15.3975 15.1025L16.8975 16.6025C17.115 16.82 17.115 17.18 16.8975 17.3975C16.785 17.51 16.6425 17.5625 16.5 17.5625Z" fill="#2A2A2A"/>
+											</svg>											
+									</button>
+								</form>
+								<button class="search_toggle">
+									<svg width="34" height="34" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17.25 32.625C8.775 32.625 1.875 25.725 1.875 17.25C1.875 8.775 8.775 1.875 17.25 1.875C25.725 1.875 32.625 8.775 32.625 17.25C32.625 25.725 25.725 32.625 17.25 32.625ZM17.25 4.125C10.005 4.125 4.125 10.02 4.125 17.25C4.125 24.48 10.005 30.375 17.25 30.375C24.495 30.375 30.375 24.48 30.375 17.25C30.375 10.02 24.495 4.125 17.25 4.125Z" fill="#2A2A2A" />
+										<path d="M33 34.125C32.715 34.125 32.43 34.02 32.205 33.795L29.205 30.795C28.77 30.36 28.77 29.64 29.205 29.205C29.64 28.77 30.36 28.77 30.795 29.205L33.795 32.205C34.23 32.64 34.23 33.36 33.795 33.795C33.57 34.02 33.285 34.125 33 34.125Z" fill="#2A2A2A" />
+									</svg>
+								</button>
+							</div>
+							<button class="cart_toggle widget_toggle">
+								<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M27.285 26.625H11.31C9.82499 26.625 8.39999 25.995 7.39499 24.9C6.38999 23.805 5.88 22.335 6 20.85L7.245 5.91C7.29 5.445 7.12499 4.99501 6.80999 4.65001C6.49499 4.30501 6.05999 4.125 5.59499 4.125H3C2.385 4.125 1.875 3.615 1.875 3C1.875 2.385 2.385 1.875 3 1.875H5.61001C6.70501 1.875 7.73999 2.33999 8.47499 3.13499C8.87999 3.58499 9.17999 4.11001 9.34499 4.69501H28.08C29.595 4.69501 30.99 5.295 32.01 6.375C33.015 7.47 33.525 8.895 33.405 10.41L32.595 21.66C32.43 24.405 30.03 26.625 27.285 26.625ZM9.42 6.92999L8.25 21.03C8.175 21.9 8.46 22.725 9.045 23.37C9.63 24.015 10.44 24.36 11.31 24.36H27.285C28.845 24.36 30.255 23.04 30.375 21.48L31.185 10.23C31.245 9.34501 30.96 8.50501 30.375 7.89001C29.79 7.26001 28.98 6.91498 28.095 6.91498H9.42V6.92999Z" fill="#2A2A2A" />
+									<path d="M24.375 34.125C22.725 34.125 21.375 32.775 21.375 31.125C21.375 29.475 22.725 28.125 24.375 28.125C26.025 28.125 27.375 29.475 27.375 31.125C27.375 32.775 26.025 34.125 24.375 34.125ZM24.375 30.375C23.955 30.375 23.625 30.705 23.625 31.125C23.625 31.545 23.955 31.875 24.375 31.875C24.795 31.875 25.125 31.545 25.125 31.125C25.125 30.705 24.795 30.375 24.375 30.375Z" fill="#2A2A2A" />
+									<path d="M12.375 34.125C10.725 34.125 9.375 32.775 9.375 31.125C9.375 29.475 10.725 28.125 12.375 28.125C14.025 28.125 15.375 29.475 15.375 31.125C15.375 32.775 14.025 34.125 12.375 34.125ZM12.375 30.375C11.955 30.375 11.625 30.705 11.625 31.125C11.625 31.545 11.955 31.875 12.375 31.875C12.795 31.875 13.125 31.545 13.125 31.125C13.125 30.705 12.795 30.375 12.375 30.375Z" fill="#2A2A2A" />
+									<path d="M31.5 13.125H13.5C12.885 13.125 12.375 12.615 12.375 12C12.375 11.385 12.885 10.875 13.5 10.875H31.5C32.115 10.875 32.625 11.385 32.625 12C32.625 12.615 32.115 13.125 31.5 13.125Z" fill="#2A2A2A" />
+								</svg>
+							</button>
+							<button class="widget_toggle aside_toggle d-block d-lg-none">
+								<span></span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12">
+						<div class="aside_wrapper pb-5">
+							<nav>
+								<ul>
+									<li><a href="#">Главная</a></li>
+									<li><a href="#">Каталог</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</nav>
+							<div class="d-flex flex-column align-items-lg-start aside_contacts mt-4 mb-5">
+								<a href="tel:+78554926001">+7 (85549) 2-60-01</a>
+								<a href="mailto:info@ammoni.ru" class="mt-2">info@ammoni.ru</a>
+							</div>
+							<a href="#" class="button">В каталог</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<main>
+			<section claas="overflow-hidden">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="d-flex align-items-lg-center align-items-start justify-content-between flex-column flex-lg-row">
+								<a href="#" class="link fw_s order-1 order-lg-0">Вернуться к покупкам</a>
+								<p id="breadcrumbs" class="mb-4 mt-5 mt-lg-0 order-0 order-lg-1"><span><span><a href="#">Каталог</a></span> / <span><a href="#">Корзина</a></span></span></p>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-lg-5 mt-2 pt-3" id="card_widget">
+						<div class="col-lg-6">
+							<div class="cart_item d-flex justify-content-between flex-column flex-sm-row">
+								<div class="d-flex justify-content-start ">
+									<div class="cart_image">
+										<img src="images/tshirt.png" loading="lazy" alt="">
+									</div>
+									<div class="d-flex justify-content-between flex-column">
+										<div class="three">Футболка кросс</div>
+										<div>
+											<div>Цвет: темно-синий</div>
+											<div>Размер: 42 (S)</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between mt-3 mt-sm-0">
+									<div>
+										<div class="three fw_s">1999₽</div>
+										<div class="lg_text"><s>2500₽</s></div>
+									</div>
+									<div class="quantity d-flex align-items-center mt-3 mt-sm-0">
+										<button class="minus">-</button>
+										<input type="number" value="1" step="1" min="1" class="quantity">
+										<button class="plus">+</button>
+									</div>
+								</div>
+							</div>
+							<div class="cart_item d-flex justify-content-between flex-column flex-sm-row">
+								<div class="d-flex justify-content-start ">
+									<div class="cart_image">
+										<img src="images/tshirt.png" loading="lazy" alt="">
+									</div>
+									<div class="d-flex justify-content-between flex-column">
+										<div class="three">Футболка кросс</div>
+										<div>
+											<div>Цвет: темно-синий</div>
+											<div>Размер: 42 (S)</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between mt-3 mt-sm-0">
+									<div>
+										<div class="three fw_s">1999₽</div>
+										<div class="lg_text"><s>2500₽</s></div>
+									</div>
+									<div class="quantity d-flex align-items-center mt-3 mt-sm-0">
+										<button class="minus">-</button>
+										<input type="number" value="1" step="1" min="1" class="quantity">
+										<button class="plus">+</button>
+									</div>
+								</div>
+							</div>
+							<div class="cart_item d-flex justify-content-between flex-column flex-sm-row">
+								<div class="d-flex justify-content-start ">
+									<div class="cart_image">
+										<img src="images/tshirt.png" loading="lazy" alt="">
+									</div>
+									<div class="d-flex justify-content-between flex-column">
+										<div class="three">Футболка кросс</div>
+										<div>
+											<div>Цвет: темно-синий</div>
+											<div>Размер: 42 (S)</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between mt-3 mt-sm-0">
+									<div>
+										<div class="three fw_s">1999₽</div>
+										<div class="lg_text"><s>2500₽</s></div>
+									</div>
+									<div class="quantity d-flex align-items-center mt-3 mt-sm-0">
+										<button class="minus">-</button>
+										<input type="number" value="1" step="1" min="1" class="quantity">
+										<button class="plus">+</button>
+									</div>
+								</div>
+							</div>
+							<div class="cart_item d-flex justify-content-between flex-column flex-sm-row">
+								<div class="d-flex justify-content-start ">
+									<div class="cart_image">
+										<img src="images/tshirt.png" loading="lazy" alt="">
+									</div>
+									<div class="d-flex justify-content-between flex-column">
+										<div class="three">Футболка кросс</div>
+										<div>
+											<div>Цвет: темно-синий</div>
+											<div>Размер: 42 (S)</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex flex-column justify-content-between mt-3 mt-sm-0">
+									<div>
+										<div class="three fw_s">1999₽</div>
+										<div class="lg_text"><s>2500₽</s></div>
+									</div>
+									<div class="quantity d-flex align-items-center mt-3 mt-sm-0">
+										<button class="minus">-</button>
+										<input type="number" value="1" step="1" min="1" class="quantity">
+										<button class="plus">+</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col_right">
+								<div class="cart_total_right">
+									<div class="d-flex align-items-center  mb-3">
+										<div class="three" style="margin-right: 10px;">Ваши данные</div>
+									</div>
+									<form action="" class="form form_order">
+										<div class="form_group">
+											<input type="text" placeholder="Ваше ФИО">
+										</div>
+										<div class="form_group">
+											<input type="email" placeholder="E-mail">
+										</div>
+										<div class="form_group">
+											<input type="text" class="phone" placeholder="Телефон">
+										</div>
+										<div class="three fw_s mb-3 mt-4">5997₽ <span class="lg_text fw_r"><s>7500₽</s></span></div>
+										<button class="button">Оформить заказ</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		<footer>
+			<div class="container-fluid">
+				<div class="row gy-5">
+					<div class="col-12 col-lg">
+						<div class="d-flex flex-column justify-content-between h-100">
+							<a href="/" class="logo mb-3 mb-lg-0">
+								<svg width="152" height="28" viewBox="0 0 152 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M13.3884 4.7191L16.1849 0L18.8765 4.7191H13.3884Z" fill="white" />
+									<path d="M10.8364 9.26347L12.7241 5.94263H19.6804L21.4282 9.26347H10.8364Z" fill="white" />
+									<path d="M10.7315 10.9763H21.4281V14.1224H13.9475L10.7315 10.9763Z" fill="white" />
+									<path d="M21.4282 21.4983V15.7305H15.5556L21.4282 21.4983Z" fill="white" />
+									<path d="M10.8364 28V17.7578L21.3583 28H10.8364Z" fill="white" />
+									<path d="M26.2522 28V17.7578L32.2297 28H26.2522Z" fill="white" />
+									<path d="M6.0125 28V17.7578L1.52588e-05 28H6.0125Z" fill="white" />
+									<path d="M45.1635 24.5742L44.1848 27.4406H40.2347L45.3383 13.9824H49.3583L54.4619 27.4406H50.5119L49.5331 24.5742H45.1635ZM47.3658 17.7577L46.1074 21.7078H48.5893L47.3658 17.7577Z" fill="white" />
+									<path d="M59.6704 19.4706V27.4406H56.035V13.9824H59.2859L63.4107 19.2958L67.5356 14.0174H70.7865V27.4406H67.1511V19.4706L63.4107 24.1897L59.6704 19.4706Z" fill="white" />
+									<path d="M77.5332 19.4706V27.4406H73.8978V13.9824H77.1487L81.2735 19.2608L85.4333 13.9824H88.6843V27.4406H85.0488V19.4706L81.3085 24.1897L77.5332 19.4706Z" fill="white" />
+									<path d="M103.785 25.7278C102.317 27.126 100.569 27.8252 98.4719 27.8252C96.3745 27.8252 94.6267 27.126 93.1586 25.7278C91.6904 24.3295 90.9913 22.6516 90.9913 20.6941C90.9913 18.7365 91.7254 17.0586 93.1586 15.6604C94.6267 14.2621 96.3745 13.563 98.4719 13.563C100.569 13.563 102.317 14.2621 103.785 15.6604C105.253 17.0586 105.953 18.7365 105.953 20.6941C105.953 22.6516 105.253 24.3295 103.785 25.7278ZM95.8152 23.4556C96.5493 24.1897 97.4232 24.5393 98.5069 24.5393C99.5556 24.5393 100.464 24.1897 101.164 23.4556C101.863 22.7215 102.247 21.8127 102.247 20.6941C102.247 19.5755 101.898 18.6666 101.164 17.9325C100.464 17.1984 99.5556 16.8489 98.5069 16.8489C97.4582 16.8489 96.5493 17.1984 95.8152 17.9325C95.0812 18.6666 94.7316 19.5755 94.7316 20.6941C94.7316 21.8127 95.0812 22.7215 95.8152 23.4556Z" fill="white" />
+									<path d="M120.495 27.4406H116.859V22.2671H111.965V27.4406H108.33V13.9824H111.965V18.9812H116.859V13.9824H120.495V27.4406Z" fill="white" />
+									<path d="M127.241 13.9824V21.498L132.974 13.9824H136.155V27.4406H132.519V19.9599L126.717 27.4406H123.571V13.9824H127.241Z" fill="white" />
+									<path d="M142.902 13.9824V21.498L148.669 13.9824H151.85V27.4406H148.215V19.9599L142.412 27.4406H139.266V13.9824H142.902ZM143.146 11.6403C142.517 11.0461 142.203 10.277 142.203 9.36816H144.51C144.51 10.0673 144.859 10.4169 145.558 10.4169C146.257 10.4169 146.607 10.0673 146.607 9.36816H148.914C148.914 10.277 148.6 11.0461 147.97 11.6403C147.341 12.2346 146.537 12.5492 145.523 12.5492C144.51 12.5492 143.776 12.2346 143.146 11.6403Z" fill="white" />
+								</svg>
+							</a>
+							<div class="mt-3 d-none d-lg-block">Все права защищены<br>© 2015-2024</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-sm-6">
+						<div class="fw_s mb-3">Магазин</div>
+						<nav>
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Коллекции</a></li>
+								<li><a href="#">Каталог</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4 col-sm-6">
+						<div class="fw_s mb-3">Помощь</div>
+						<nav>
+							<ul>
+								<li><a href="#">Политика конфиденциальности</a></li>
+								<li><a href="#">Пользовательское соглашение</a></li>
+								<li><a href="#">Оплата и доставка</a></li>
+								<li><a href="#">Служба поддержки</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col">
+							<div class="d-flex flex-column justify-content-lg-between h-100">
+								<div class="d-flex flex-column align-items-lg-end">
+									<a href="tel:+78554926001">+7 (85549) 2-60-01</a>
+									<a href="mailto:info@ammoni.ru" class="mt-2">info@ammoni.ru</a>
+								</div>
+								<div class="social d-flex align-items-center justify-content-lg-end mt-lg-0 mt-4">
+									<a href="#">
+										<img src="images/vk.png" alt="" target="_blank">
+									</a>
+									<a href="#">
+										<img src="images/tg.png" alt="" target="_blank">
+									</a>
+								</div>
+							</div>
+							<div class="d-block d-lg-none mt-4">Все права защищены<br>© 2015-2024</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+</body>
+</html>
