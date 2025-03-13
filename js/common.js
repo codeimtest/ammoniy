@@ -71,7 +71,32 @@ $(".minus").click(function () {
 			input.val(currentValue - step).change(); // Уменьшаем и обновляем значение
 	}
 });
+$('#check_order').on('change', function () {
+	$('.form_order button').prop('disabled', !this.checked);
+});
+//mask
 $(".phone").mask("+7 (999) 999-99-99");
+
+//catalog_slider
+var swiper0 = new Swiper(".catalog_slider", {
+	loop: false,
+	spaceBetween: 12,
+	slidesPerView: 1.3,
+	freeMode: true,
+	watchSlidesProgress: true,
+    breakpoints: {
+        576: {
+					slidesPerView: 2.3
+        },
+				768: {
+					slidesPerView: 3
+				},
+				992: {
+					slidesPerView: 4
+				}
+    }
+});
+
 // slider home
 var swiper = new Swiper(".collection_slider", {
 	spaceBetween: 0,
@@ -91,7 +116,7 @@ var swiper2 = new Swiper(".mySwiper", {
 	watchSlidesProgress: true,
 	direction: "horizontal", // По умолчанию вертикальный
     breakpoints: {
-        576.5: {
+        992.5: {
             direction: "vertical", // Горизонтальный при ширине 564px и больше
             slidesPerView: 4
         }
@@ -104,3 +129,14 @@ var swiper3 = new Swiper(".mySwiper2", {
 	},
 	loop: true,
 });
+
+// удали когда подключишь вордпресс
+$(".sizes span").click(function () {
+	if (!$(this).hasClass("not")) { 
+			$(".sizes span").removeClass("current"); // Удаляем у всех
+			$(this).addClass("current"); // Добавляем текущему
+	}
+});
+function orderAlert() {
+	alert("Ваш заказ оформлен!");
+}
