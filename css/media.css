@@ -156,10 +156,20 @@
 		background-position: center center !important;
 		background-position-x: 26% !important;
 	}
+	
 }
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
+	.first_screen_page,.first_screen_page.first_screen_page_archive{
+		min-height: 154px;
+	}
+	.first_screen_page h1{
+		text-align: center;
+	}
+	.category_list{
+		margin-top: 40px;
+	}
 	.category_card.has_bg {
 		background-position: center left !important;
 }
