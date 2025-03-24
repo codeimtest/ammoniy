@@ -28,6 +28,9 @@
 
 /* md <= Large (lg) */
 @media (max-width : 992px) {
+	.aside_toggle{
+		margin-left: 20px !important;
+	}
 	.form .form_group + *{
 		margin-top: 12px;
 	}
@@ -150,7 +153,7 @@
 		min-height: 268px;
 	}
 	.category_card .two{
-		font-size: 32px;
+		font-size: calc(var(--index)* 2.1)
 	}
 	.category_card.has_bg{
 		background-position: center center !important;
@@ -252,7 +255,7 @@
 @media (max-width : 576px) {
 	.category_card.has_bg{
 		background-position: center top !important;
-		background-position-x: 30% !important;
+		background-position-x: 48% !important;
 	}
 	.section_image_right{
 		max-height: 235px;
@@ -282,6 +285,9 @@
 	.btn_group * + *{
 		margin-top: 10px;
 		margin-left: 0;
+	}
+	.category_card .two{
+		font-size: calc(var(--index)* 2.5)
 	}
 }
 
