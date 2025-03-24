@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/fancybox/fancybox.min.css">
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -23,6 +24,7 @@
 	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
 	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
 	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/fancybox/fancybox.umd.js" defer></script>
 
 	<script src="js/common.js" defer></script>
 
@@ -54,12 +56,12 @@
 							</svg>
 						</a>
 					</div>
-					<div class="col d-none d-lg-block">
+					<div class="col-md-8 d-none d-lg-block">
 						<nav>
 							<ul>
-								<li><a href="/ammoniy/">Главная</a></li>
 								<li><a href="/ammoniy/catalog.html">Каталог</a></li>
-								<li><a href="/ammoniy/">Контакты</a></li>
+								<li><a href="/ammoniy/">О бренде</a></li>
+								<li><a href="/ammoniy/">Доставка</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -89,6 +91,7 @@
 									<path d="M12.375 34.125C10.725 34.125 9.375 32.775 9.375 31.125C9.375 29.475 10.725 28.125 12.375 28.125C14.025 28.125 15.375 29.475 15.375 31.125C15.375 32.775 14.025 34.125 12.375 34.125ZM12.375 30.375C11.955 30.375 11.625 30.705 11.625 31.125C11.625 31.545 11.955 31.875 12.375 31.875C12.795 31.875 13.125 31.545 13.125 31.125C13.125 30.705 12.795 30.375 12.375 30.375Z" fill="#2A2A2A" />
 									<path d="M31.5 13.125H13.5C12.885 13.125 12.375 12.615 12.375 12C12.375 11.385 12.885 10.875 13.5 10.875H31.5C32.115 10.875 32.625 11.385 32.625 12C32.625 12.615 32.115 13.125 31.5 13.125Z" fill="#2A2A2A" />
 								</svg>
+								<span>2</span>
 							</a>
 							<button class="widget_toggle aside_toggle d-block d-lg-none">
 								<span></span>
@@ -105,9 +108,9 @@
 						<div class="aside_wrapper pb-5">
 							<nav>
 								<ul>
-									<li><a href="/ammoniy/">Главная</a></li>
 									<li><a href="/ammoniy/catalog.html">Каталог</a></li>
-									<li><a href="/ammoniy/">Контакты</a></li>
+									<li><a href="/ammoniy/">О бренде</a></li>
+									<li><a href="/ammoniy/">Доставка</a></li>
 								</ul>
 							</nav>
 							<div class="d-flex flex-column align-items-lg-start aside_contacts mt-4 mb-5">
@@ -127,7 +130,7 @@
 						<div class="col">
 							<div class="d-flex align-items-lg-center align-items-start justify-content-between flex-column flex-lg-row">
 								<a href="/ammoniy/catalog.html" class="link fw_s order-1 order-lg-0">Вернуться к покупкам</a>
-								<p id="breadcrumbs" class="mb-4 mt-5 mt-lg-0 order-0 order-lg-1"><span><span><a href="#">Каталог</a></span> / <span class="breadcrumb_last"><a href="#">Оформление заказа</a></span></span></p>
+								<p id="breadcrumbs" class="mb-4 mt-5 mt-lg-0 order-0 order-lg-1"><span><span><a href="#">Корзина</a></span> / <span class="breadcrumb_last"><a href="#">Оформление заказа</a></span></span></p>
 							</div>
 						</div>
 					</div>
@@ -214,8 +217,8 @@
 														</div>
 													</div>
 													<div style="text-align: right;">
-														<div class="xl_text fw_s">1999₽</div>
-														<div class="rg_text"><s>2500₽</s></div>
+														<div class="xl_text fw_s">1.999₽</div>
+														<div class="rg_text"><s>2.500₽</s></div>
 													</div>
 												</div>
 												<div class="total_cart_item d-flex justify-content-between">
@@ -228,8 +231,8 @@
 														</div>
 													</div>
 													<div style="text-align: right;">
-														<div class="xl_text fw_s">1999₽</div>
-														<div class="rg_text"><s>2500₽</s></div>
+														<div class="xl_text fw_s">1.999₽</div>
+														<div class="rg_text"><s>2.500₽</s></div>
 													</div>
 												</div>
 												<div class="total_cart_item d-flex justify-content-between">
@@ -242,8 +245,8 @@
 														</div>
 													</div>
 													<div style="text-align: right;">
-														<div class="xl_text fw_s">1999₽</div>
-														<div class="rg_text"><s>2500₽</s></div>
+														<div class="xl_text fw_s">1.999₽</div>
+														<div class="rg_text"><s>2.500₽</s></div>
 													</div>
 												</div>
 											</div>
@@ -251,7 +254,7 @@
 										<div class="delivery_widget white-text" style="background-color: var(--accent);">
 											<div class="d-flex align-items-center total mb-3">
 												<div class="lg_text">Подытог</div>
-												<div class="xl_text fw_s">5997₽</div>
+												<div class="xl_text fw_s">5.997₽</div>
 											</div>
 											<div class="lg_text mb-3">Доставка</div>
 											<form action="" class="form">
@@ -294,7 +297,7 @@
 												<a href="#" class="fw_s white-text">Изменить адрес</a>
 												<div class="d-flex align-items-center total mt-4">
 													<div class="lg_text">Итого</div>
-													<div class="xl_text fw_s">5997₽ <s class="fw_r md_text">7500₽</s></div>
+													<div class="xl_text fw_s">5.997₽ <s class="fw_r md_text">7.500₽</s></div>
 												</div>
 												
 											</form>
@@ -303,7 +306,7 @@
 											<div class="three mb-4">Оплата</div>
 											<div class="form_group custom-radio">
 												<input type="radio" name="pay" id="carta" checked>
-												<label for="carta">Наличными при получении</label>
+												<label for="carta">Картой онлайн</label>
 											</div>
 											<div class="form_group custom-radio">
 												<input type="radio" name="pay" id="nal">
@@ -317,7 +320,7 @@
 												<input type="radio" name="pay" id="schet">
 												<label for="schet">По расчетному счету</label>
 											</div>
-											<button class="button mt-md-5 mt-3 fw_s" style="width: 100%;" onclick="orderAlert()">Подтвердить заказ</button>
+											<button class="button mt-md-5 mt-3 fw_s" type="button" style="width: 100%;" onclick="orderAlert()">Подтвердить заказ</button>
 										</form>
 										
 									</div>
@@ -359,15 +362,14 @@
 						<div class="fw_s mb-4">Магазин</div>
 						<nav>
 							<ul>
-								<li><a href="/ammoniy/">Главная</a></li>
-								<li><a href="/ammoniy/category.html">Коллекции</a></li>
 								<li><a href="/ammoniy/catalog.html">Каталог</a></li>
+								<li><a href="/ammoniy/">О бренде</a></li>
 								<li><a href="/ammoniy/">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="col-lg-4 col-md">
-						<div class="fw_s mb-3 d-none d-md-block">Помощь</div>
+						<div class="fw_s mb-4 d-none d-md-block">Помощь</div>
 						<nav>
 							<ul>
 								<li><a href="/ammoniy/">Политика конфиденциальности</a></li>
@@ -397,6 +399,24 @@
 				</div>
 			</div>
 		</footer>
+		<div class="popup for_order">
+			<div class="popup_dialog">
+				<div class="popup_wrap">
+					<div class="d-flex justify-content-center mb-3">
+						<div class="two text_center uppercase">Спасибо за заказ!</div>
+						<div class="btn_close">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+					<div class="lg_text text_center mb-4">Заказ передан в обработку</div>
+					<div class="d-flex justify-content-center btn_group flex-sm-row flex-column">
+						<a href="/ammomiy" class="button">Вернуться на главную</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 

@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="libs/fancybox/fancybox.min.css">
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -23,6 +24,7 @@
 	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
 	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
 	<script src="libs/input-mask/jquery.maskedinput.min.js" defer></script>
+	<script src="libs/fancybox/fancybox.umd.js" defer></script>
 
 	<script src="js/common.js" defer></script>
 
@@ -54,12 +56,12 @@
 							</svg>
 						</a>
 					</div>
-					<div class="col d-none d-lg-block">
+					<div class="col-md-8 d-none d-lg-block">
 						<nav>
 							<ul>
-								<li><a href="/ammoniy/">Главная</a></li>
 								<li><a href="/ammoniy/catalog.html">Каталог</a></li>
-								<li><a href="/ammoniy/">Контакты</a></li>
+								<li><a href="/ammoniy/">О бренде</a></li>
+								<li><a href="/ammoniy/">Доставка</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -89,6 +91,7 @@
 									<path d="M12.375 34.125C10.725 34.125 9.375 32.775 9.375 31.125C9.375 29.475 10.725 28.125 12.375 28.125C14.025 28.125 15.375 29.475 15.375 31.125C15.375 32.775 14.025 34.125 12.375 34.125ZM12.375 30.375C11.955 30.375 11.625 30.705 11.625 31.125C11.625 31.545 11.955 31.875 12.375 31.875C12.795 31.875 13.125 31.545 13.125 31.125C13.125 30.705 12.795 30.375 12.375 30.375Z" fill="#2A2A2A" />
 									<path d="M31.5 13.125H13.5C12.885 13.125 12.375 12.615 12.375 12C12.375 11.385 12.885 10.875 13.5 10.875H31.5C32.115 10.875 32.625 11.385 32.625 12C32.625 12.615 32.115 13.125 31.5 13.125Z" fill="#2A2A2A" />
 								</svg>
+								<span>2</span>
 							</a>
 							<button class="widget_toggle aside_toggle d-block d-lg-none">
 								<span></span>
@@ -105,9 +108,9 @@
 						<div class="aside_wrapper pb-5">
 							<nav>
 								<ul>
-									<li><a href="/ammoniy/">Главная</a></li>
 									<li><a href="/ammoniy/catalog.html">Каталог</a></li>
-									<li><a href="/ammoniy/">Контакты</a></li>
+									<li><a href="/ammoniy/">О бренде</a></li>
+									<li><a href="/ammoniy/">Доставка</a></li>
 								</ul>
 							</nav>
 							<div class="d-flex flex-column align-items-lg-start aside_contacts mt-4 mb-5">
@@ -131,19 +134,27 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="d-flex grid_gallery relative overflow-hidden">
-								<div class=" mySwiper2 overflow-hidden">
+								<div class="mySwiper2 overflow-hidden">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
-											<img src="images/image.png" />
+											<a href="images/image.png" data-fancybox="gallery">
+												<img src="images/image.png" />
+											</a>
 										</div>
 										<div class="swiper-slide">
-											<img src="images/image-2.png" />
+											<a href="images/image-2.png" data-fancybox="gallery">
+												<img src="images/image-2.png" />
+											</a>
 										</div>
 										<div class="swiper-slide">
-											<img src="images/image-3.png" />
+											<a href="images/image-3.png" data-fancybox="gallery">
+												<img src="images/image-3.png" />
+											</a>
 										</div>
 										<div class="swiper-slide">
-											<img src="images/image-4.png" />
+											<a href="images/image-4.png" data-fancybox="gallery">
+												<img src="images/image-4.png" />
+											</a>
 										</div>
 									</div>
 								</div>
@@ -169,7 +180,7 @@
 							<div>
 								<div class="d-flex justify-content-between mb-lg-5 mb-md-4 mb-2 mt-3 mt-lg-0">
 									<h1 class="three mb-0 ">Футболка</h1>
-									<div class="fw_s three">2699₽</div>
+									<div class="fw_s three">2.699 ₽</div>
 								</div>
 								<div class="product_meta mb-md-5 mb-0">
 									<div class="d-flex align-items-center">
@@ -191,11 +202,17 @@
 										</div>
 									</div>
 									<div class="d-flex align-items-center">
+										<div></div>
+										<div>
+											<a href="images/size.webp" class="md_text fw_s" data-fancybox="size" style="color: var(--accent);">Размерная сетка</a>
+										</div>
+									</div>
+									<div class="d-flex align-items-center">
 										<div class="fw_s">Состав:</div>
 										хлопок 100%
 									</div>
 								</div>
-								<a href="/ammoniy/cart.html" class="button d-none d-md-inline-block">Добавить в корзину</a>
+								<a href="#" class="button d-none d-md-inline-block get_product">Добавить в корзину</a>
 							</div>
 							<div class="mt-4 acordeon">
 								<div>
@@ -206,12 +223,8 @@
 									<div>Рекомендации по уходу</div>
 									<div class="sm_text">Информация по уходу</div>
 								</div>
-								<div>
-									<div>Доставка и оплата</div>
-									<div class="sm_text">Информация по оплате</div>
-								</div>
 							</div>
-							<a href="#" class="button d-inline-block d-md-none mt-4">Добавить в корзину</a>
+							<a href="#" class="get_product button d-inline-block d-md-none mt-4">Добавить в корзину</a>
 						</div>
 					</div>
 				</div>
@@ -243,7 +256,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Футболка Пастернак</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">3199 ₽</div>
+													<div class="three fw_s">3.199 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -256,7 +269,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Картхолдер</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">2699 ₽</div>
+													<div class="three fw_s">2.699 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -269,7 +282,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Кружка Шерегеш</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">1799 ₽</div>
+													<div class="three fw_s">1.799 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -282,7 +295,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Худи Цифровая анархия</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">1299 ₽</div>
+													<div class="three fw_s">1.299 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -295,7 +308,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Бутылка кросс</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">3199 ₽</div>
+													<div class="three fw_s">3.199 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -308,7 +321,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Шоппер Пастернак</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">2699 ₽</div>
+													<div class="three fw_s">2.699 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -321,7 +334,7 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Футболка кросс</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">1299 ₽</div>
+													<div class="three fw_s">1.299 ₽</div>
 												</div>
 											</div>
 										</a>
@@ -334,10 +347,28 @@
 											<div class="d-flex flex-column justify-content-between">
 												<div class="h-100 lg_text mb-1">Футболка кросс</div>
 													<div class="d-flex align-items-center">
-													<div class="three fw_s">1299 ₽</div>
+													<div class="three fw_s">1.299 ₽</div>
 												</div>
 											</div>
 										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div class="d-flex align-items-center flex-column flex-lg-row mt-lg-5 mt-4 btn_group_section justify-content-sm-center justify-content-between">
+								<div class="nav_slider d-flex align-items-center  justify-content-center">
+									<div class="nav_products_prev">
+										<svg width="109" height="16" viewBox="0 0 109 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.292893 8.70712C-0.0976257 8.31659 -0.0976258 7.68343 0.292892 7.2929L6.65686 0.928941C7.04738 0.538417 7.68055 0.538417 8.07107 0.928941C8.46159 1.31947 8.46159 1.95263 8.07107 2.34315L2.41422 8.00001L8.07107 13.6569C8.46159 14.0474 8.46159 14.6806 8.07107 15.0711C7.68055 15.4616 7.04738 15.4616 6.65686 15.0711L0.292893 8.70712ZM109 9L1 9.00001L1 7.00001L109 7L109 9Z" fill="#2A2A2A" />
+										</svg>
+									</div>
+									<div class="nav_products_next">
+										<svg width="109" height="16" viewBox="0 0 109 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M108.707 7.29291C109.098 7.68344 109.098 8.3166 108.707 8.70713L102.343 15.0711C101.953 15.4616 101.319 15.4616 100.929 15.0711C100.538 14.6806 100.538 14.0474 100.929 13.6569L106.586 8.00002L100.929 2.34316C100.538 1.95264 100.538 1.31947 100.929 0.92895C101.319 0.538426 101.953 0.538426 102.343 0.92895L108.707 7.29291ZM1.74846e-07 7L108 7.00002L108 9.00002L-1.74846e-07 9L1.74846e-07 7Z" fill="#2A2A2A" />
+										</svg>
 									</div>
 								</div>
 							</div>
@@ -386,15 +417,14 @@
 						<div class="fw_s mb-4">Магазин</div>
 						<nav>
 							<ul>
-								<li><a href="/ammoniy/">Главная</a></li>
-								<li><a href="/ammoniy/category.html">Коллекции</a></li>
 								<li><a href="/ammoniy/catalog.html">Каталог</a></li>
+								<li><a href="/ammoniy/">О бренде</a></li>
 								<li><a href="/ammoniy/">Контакты</a></li>
 							</ul>
 						</nav>
 					</div>
 					<div class="col-lg-4 col-md">
-						<div class="fw_s mb-3 d-none d-md-block">Помощь</div>
+						<div class="fw_s mb-4 d-none d-md-block">Помощь</div>
 						<nav>
 							<ul>
 								<li><a href="/ammoniy/">Политика конфиденциальности</a></li>
@@ -424,6 +454,24 @@
 				</div>
 			</div>
 		</footer>
+		<div class="popup for_cart">
+			<div class="popup_dialog">
+				<div class="popup_wrap">
+					<div class="d-flex justify-content-center mb-4 mb-lg-5">
+						<div class="two text_center uppercase">Товар добавлен в корзину!</div>
+						<div class="btn_close">
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13 1L1 13M1 1L13 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</div>
+					</div>
+					<div class="d-flex justify-content-center btn_group flex-sm-row flex-column">
+						<a href="/ammomiy/cart.html" class="button">Перейти в корзину</a>
+						<a href="/ammomiy/catalog.html" class="button">Продолжить покупки</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 

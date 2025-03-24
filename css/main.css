@@ -172,6 +172,12 @@ h5,.five{
 .btn_group_section .nav_slider{
 	margin-right: 30px;
 }
+.btn_group * + *{
+	margin-left: 20px;
+}
+.btn_group .button{
+	padding: 16px 35px;
+}
 .link_button{
 	text-decoration: none;
 	padding-right: 37px;
@@ -199,6 +205,24 @@ h5,.five{
 }
 .widget_toggle + *{
 	margin-left: 10px;
+}
+.cart_toggle{
+	position: relative;
+}
+.cart_toggle span{
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	background: var(--accent);
+	border-radius: 50%;
+	font-size: 10px;
+	font-weight: var(--semi);
 }
 .aside_toggle{
 	width: 32px;
@@ -360,6 +384,12 @@ aside .aside_contacts a{
 }
 .product_card{
 	text-decoration: none;
+	transition: var(--transition);
+}
+.product_card img.alt_image{
+	opacity: 0;
+	visibility: hidden;
+	transition: var(--transition);
 }
 .product_card_holder{
 	background: var(--gray);
@@ -368,7 +398,7 @@ aside .aside_contacts a{
 }
 .product_card_holder img{
 	max-width: 100%;
-	object-fit: contain;
+	object-fit: cover;
 	max-height: 324px;
 	min-width: 100%;
 	position: absolute;
@@ -509,7 +539,7 @@ body.page header.toggled .aside_toggle:after, body.page header.toggled .aside_to
 	background: var(--text);
 }
 body.page header.toggled a.logo svg path{
-	fill: initial;
+	fill: revert-layer;
 }
 body.page header .widget_toggle .searchform svg path{
 	fill: var(--text);
@@ -914,4 +944,72 @@ footer .social a + a{
 	bottom: 0;
 	margin: auto;
 	background: transparent;
+}
+/* popup */
+.active.popup {
+	opacity: 1;
+	visibility: visible;
+	z-index: 999;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	outline: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s ease all;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgb(0 0 0 / .8);
+	z-index: 5;
+}
+
+.popup.active .popup_dialog {
+	transform: translateY(0%);
+}
+
+.popup .popup_dialog {
+	min-height: calc(100% - 10rem);
+	max-width: 720px;
+	margin: 5rem auto;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: auto;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	transform: translateY(-100%);
+	transition: 0.4s ease all;
+}
+.popup .popup_dialog .popup_wrap {
+	padding: 52px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	outline: 0;
+	background: #fff;
+}
+.popup .btn_close {
+	right: -50px;
+	top: -30px;
+	position: absolute;
+	cursor: pointer;
+	transition: 0.2s ease all;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

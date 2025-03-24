@@ -78,24 +78,39 @@ $('#check_order').on('change', function () {
 $(".phone").mask("+7 (999) 999-99-99");
 
 //catalog_slider
-var swiper0 = new Swiper(".catalog_slider", {
-	loop: false,
-	spaceBetween: 12,
-	slidesPerView: 1.3,
-	freeMode: true,
-	watchSlidesProgress: true,
-    breakpoints: {
+
+  $(".catalog_slider").each(function () {
+    let $this = $(this); // Текущая карусель
+    let $parentRow = $this.closest(".row"); // Находим родительский .row
+    let prevButton = $parentRow.next().find(".nav_products_prev")[0]; // Находим кнопку Prev в следующем .row
+    let nextButton = $parentRow.next().find(".nav_products_next")[0]; // Находим кнопку Next в следующем .row
+
+    new Swiper(this, {
+      loop: false,
+      spaceBetween: 12,
+      slidesPerView: 1.3,
+      freeMode: true,
+      watchSlidesProgress: true,
+      navigation: {
+        nextEl: nextButton,
+        prevEl: prevButton,
+      },
+      breakpoints: {
         576: {
-					slidesPerView: 2.3
+          slidesPerView: 2.3
         },
-				768: {
-					slidesPerView: 3
-				},
-				992: {
-					slidesPerView: 4
-				}
-    }
-});
+        768: {
+          slidesPerView: 3
+        },
+        992: {
+          slidesPerView: 4
+        }
+      }
+    });
+  });
+
+
+
 
 // slider home
 var swiper = new Swiper(".collection_slider", {
@@ -130,6 +145,25 @@ var swiper3 = new Swiper(".mySwiper2", {
 	loop: true,
 });
 
+//Popup
+$('.get_product').click(function(e){
+	e.preventDefault()
+	$('.for_cart').addClass('active')
+	$('body').addClass('lock')
+})
+$('.btn_close').click(function(){
+	$('.popup').removeClass('active');
+	$('body').removeClass('lock')
+})
+//click on outside popup
+$(document).mouseup(function (e) {
+	var container = $(".popup_dialog");
+	if (container.has(e.target).length === 0) {
+		$('.popup').removeClass('active');
+		$('body').removeClass('lock');
+	}
+});
+
 // удали когда подключишь вордпресс
 $(".sizes span").click(function () {
 	if (!$(this).hasClass("not")) { 
@@ -138,5 +172,14 @@ $(".sizes span").click(function () {
 	}
 });
 function orderAlert() {
-	alert("Ваш заказ оформлен!");
+	$('.for_order').addClass('active')
+	$('body').addClass('lock')
 }
+
+//в конце
+Fancybox.bind('[data-fancybox="size"]', {
+	// Your custom options
+});
+Fancybox.bind('[data-fancybox="gallery"]', {
+	// Your custom options
+});
